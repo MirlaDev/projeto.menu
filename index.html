@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu com Imagem</title>
+    <style>
+        /* CONTAINER PRINCIPAL */
+        .menu-container {
+            display: flex;
+            justify-content: flex-end;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        
+        /* MENU ORIGINAL */
+        .menu {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 10px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .menu li {
+            position: relative;
+        }
+        
+        .menu li a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 16px;
+            background-color: #e0e0e0;
+            border: 2px solid #333;
+            border-radius: 4px;
+            display: block;
+        }
+        
+        .menu li a:hover {
+            background-color: #d0d0d0;
+        }
+        
+        /* DROPDOWN */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            list-style: none;
+            padding: 5px 0;
+            margin: 0;
+            z-index: 100;
+        }
+        
+        .dropdown li a {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 0;
+        }
+        
+        .menu li:hover .dropdown {
+            display: block;
+        }
+        
+        /* ESTILO DA IMAGEM CENTRALIZADA ABAIXO DO MENU */
+        .imagem-container {
+            text-align: center;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .imagem-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <!-- MENU ORIGINAL -->
+    <div class="menu-container">
+        <ul class="menu">
+            <li><a href="inicio.html">Início</a></li>
+            <li>
+                <a href="servicos.html">Serviços</a>
+                <ul class="dropdown">
+                    <li><a href="webdesign.html">Web Design</a></li>
+                    <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
+                    <li><a href="seo.html">SEO</a></li>
+                </ul>
+            </li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- IMAGEM CENTRALIZADA ABAIXO DO MENU -->
+    <div class="imagem-container">
+        <img src="web.jpeg" alt="Descrição da imagem">
+    </div>
+</body>
+</html>
